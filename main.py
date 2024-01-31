@@ -16,7 +16,15 @@ canvas.create_text(400, 150, text="Title", font=(
     "Arial", 40, "italic"), fill="#000000")
 canvas.create_text(400, 263, text="word", font=(
     "Arial", 60, "bold"), fill="#000000")
-canvas.grid(column=0, row=0)
+canvas.grid(column=0, row=0, columnspan=2)
+
+cross_image = PhotoImage(file="images/wrong.png")
+unknown_button = Button(image=cross_image, highlightthickness=0)
+unknown_button.grid(column=0, row=1)
+
+check_image = PhotoImage(file="images/right.png")
+known_button = Button(image=check_image, highlightthickness=0)
+known_button.grid(column=1, row=1)
 
 
 # Window mainloop to keep GUI display open
